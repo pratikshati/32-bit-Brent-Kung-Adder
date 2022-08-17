@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity and_xy is
+port ( 
+		x,y : in std_logic;
+		z : out std_logic);
+end entity;
+
+architecture dataflow of and_xy is
+begin
+z <= (x and y) after 100 ps;
+end architecture;
